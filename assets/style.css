@@ -330,7 +330,48 @@ em{font-style:normal}
   line-height:1.6;
 }
 
-
+/* ============================================================
+   时间线（教育 / 实习 / 校园共用）
+   ============================================================ */
+.timeline{display:flex;flex-direction:column}
+.tl-item{
+  display:grid;
+  grid-template-columns:132px 1fr;
+  gap:28px;
+  padding:26px 0;
+  border-top:1px solid var(--line);
+}
+.tl-item:first-child{border-top:none;padding-top:0}
+.tl-when{
+  font-size:12.5px;
+  color:var(--ink-3);
+  font-variant-numeric:tabular-nums;
+  letter-spacing:.03em;
+  padding-top:4px;
+}
+.tl-body h3{
+  font-size:16.5px;
+  margin-bottom:5px;
+}
+.tl-org{
+  font-size:13px;
+  color:var(--accent);
+  font-weight:600;
+  margin-bottom:9px;
+}
+.tl-body p{
+  font-size:14.5px;
+  color:var(--ink-2);
+}
+.metrics{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 20px;
+  margin-top:12px;
+  font-size:12.5px;
+  color:var(--ink-3);
+}
+.metrics b{color:var(--ink);font-weight:600}
 
 
 
