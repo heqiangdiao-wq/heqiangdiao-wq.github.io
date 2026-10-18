@@ -818,7 +818,32 @@ em{font-style:normal}
 }
 .foot-sub{color:rgba(255,255,255,.32);font-size:11.5px}
 
-
+/* ============================================================
+   响应式 · 平板（≤900px）
+   ============================================================ */
+@media (max-width:900px){
+  :root{--gutter:26px}
+  .about{
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+  .about-side{
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap:32px;
+    padding-left:0;
+    padding-top:26px;
+    border-left:none;
+    border-top:1px solid var(--line);
+  }
+  .side-item{flex:1 1 140px}
+  .case-grid{grid-template-columns:1fr;gap:32px}
+  .flow{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:1fr}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .result-grid{grid-template-columns:1fr}
+  .res{padding:22px 24px}
+}
 
 
 
