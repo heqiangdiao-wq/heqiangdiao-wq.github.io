@@ -627,7 +627,49 @@ em{font-style:normal}
   border-left:2px solid var(--accent);
 }
 
-
+/* ============================================================
+   其他项目：卡片
+   ============================================================ */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:26px 24px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  transition:transform .3s var(--ease),border-color .3s var(--ease);
+}
+.card:hover{
+  transform:translateY(-3px);
+  border-color:var(--accent);
+}
+.card-when{
+  font-size:11.5px;
+  color:var(--ink-3);
+  letter-spacing:.06em;
+  font-variant-numeric:tabular-nums;
+}
+.card h3{
+  font-size:15.5px;
+  line-height:1.5;
+}
+.card-role{
+  font-size:12.5px;
+  color:var(--rust);
+  font-weight:600;
+}
+.card > p:last-child{
+  font-size:13.5px;
+  color:var(--ink-2);
+  line-height:1.7;
+  margin-top:4px;
+}
 
 
 
