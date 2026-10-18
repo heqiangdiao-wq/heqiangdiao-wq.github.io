@@ -1,0 +1,7 @@
+# 本站包含求职联系方式，禁止搜索引擎抓取与收录
+User-agent: *
+Disallow: /
+
+# 静态资源同样不索引
+User-agent: *
+Disallow: /assets/
