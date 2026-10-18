@@ -749,7 +749,55 @@ em{font-style:normal}
   flex-shrink:0;
 }
 
-
+/* ============================================================
+   联系
+   ============================================================ */
+.sec-contact{background:var(--ink);color:#fff}
+.sec-contact .sec-head h2{color:#fff}
+.sec-contact .sec-idx{color:#7fbfa1}
+.sec-contact .rule{background:rgba(255,255,255,.14)}
+.contact-lead{
+  font-family:var(--serif);
+  font-size:clamp(18px,2.6vw,24px);
+  line-height:1.6;
+  margin-bottom:34px;
+  max-width:26em;
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  max-width:620px;
+}
+.contact-card{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  padding:22px 24px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:var(--radius);
+  transition:border-color .26s var(--ease),background .26s var(--ease),transform .26s var(--ease);
+}
+.contact-card:hover{
+  border-color:#7fbfa1;
+  background:rgba(255,255,255,.04);
+  transform:translateY(-2px);
+}
+.cc-label{
+  font-size:11.5px;
+  letter-spacing:.18em;
+  color:rgba(255,255,255,.5);
+}
+.cc-val{
+  font-size:15.5px;
+  font-weight:600;
+  letter-spacing:.02em;
+}
+.privacy{
+  margin-top:26px;
+  font-size:11.5px;
+  color:rgba(255,255,255,.4);
+}
 
 
 
