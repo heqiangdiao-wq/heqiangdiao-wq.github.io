@@ -172,7 +172,65 @@ em{font-style:normal}
   transition:width .1s linear;
 }
 
-
+/* ============================================================
+   Hero：姓名与定位
+   ============================================================ */
+.hero{
+  padding-block:96px 54px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:-30% 40% auto -20%;
+  height:520px;
+  background:radial-gradient(closest-side,rgba(47,93,71,.09),transparent);
+  pointer-events:none;
+}
+.kicker{
+  font-size:12px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  margin-bottom:26px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.kicker::after{
+  content:"";
+  width:56px;
+  height:1px;
+  background:var(--line);
+}
+.hero-name{
+  font-size:clamp(52px,9.5vw,96px);
+  letter-spacing:.06em;
+  line-height:1.02;
+  margin-bottom:22px;
+}
+.hero-role{
+  font-family:var(--serif);
+  font-size:clamp(18px,2.8vw,26px);
+  line-height:1.62;
+  color:var(--ink-2);
+  max-width:19em;
+}
+.hero-role em{
+  color:var(--accent);
+  font-weight:600;
+  position:relative;
+  white-space:nowrap;
+}
+.hero-role em::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:.06em;
+  height:.34em;
+  background:var(--accent-soft);
+  z-index:-1;
+}
 
 
 
