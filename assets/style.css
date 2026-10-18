@@ -799,7 +799,24 @@ em{font-style:normal}
   color:rgba(255,255,255,.4);
 }
 
-
+/* ============================================================
+   页脚
+   ============================================================ */
+.foot{
+  background:var(--ink);
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-block:34px;
+  color:rgba(255,255,255,.55);
+  font-size:12.5px;
+}
+.foot .wrap{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 24px;
+  justify-content:space-between;
+  align-items:center;
+}
+.foot-sub{color:rgba(255,255,255,.32);font-size:11.5px}
 
 
 
