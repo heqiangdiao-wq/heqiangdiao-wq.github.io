@@ -883,7 +883,29 @@ em{font-style:normal}
   .side-num{font-size:28px}
 }
 
-
+/* ============================================================
+   动效：滚动进场（配合 assets/main.js）
+   默认可见，JS 生效时才降级为「先隐藏后显现」，
+   避免禁用 JS 时整页空白。
+   ============================================================ */
+.reveal-ready .reveal{
+  opacity:0;
+  transform:translateY(16px);
+  transition:opacity .7s var(--ease),transform .7s var(--ease);
+}
+.reveal-ready .reveal.is-in{
+  opacity:1;
+  transform:none;
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal-ready .reveal{
+    opacity:1 !important;
+    transform:none !important;
+    transition:none !important;
+  }
+  *{animation-duration:.001ms !important;transition-duration:.001ms !important}
+}
 
 
 

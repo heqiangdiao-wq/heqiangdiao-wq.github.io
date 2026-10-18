@@ -59,4 +59,30 @@
   ids.forEach(function (id) { io.observe(byId[id].el); });
 })();
 
+/* ============================================================
+   滚动进场动画
+   规则：JS 就绪后才给根元素加 .reveal-ready，
+   因此禁用 JS / 老浏览器下内容始终可见。
+   ============================================================ */
+(function () {
+  'use strict';
 
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var targets = [].slice.call(document.querySelectorAll('.sec, .case, .card'));
+  if (!targets.length) return;
+
+  targets.forEach(function (el) { el.classList.add('reveal'); });
+  document.documentElement.classList.add('reveal-ready');
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      en.target.classList.add('is-in');
+      io.unobserve(en.target);
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.06 });
+
+  targets.forEach(function (el) { io.observe(el); });
+})();
