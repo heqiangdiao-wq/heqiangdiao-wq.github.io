@@ -681,7 +681,44 @@ em{font-style:normal}
    ============================================================ */
 .sec-alt .tl-item{border-top-color:var(--line-soft)}
 
-
+/* ============================================================
+   技能矩阵
+   ============================================================ */
+.skill-matrix{display:flex;flex-direction:column}
+.sm-row{
+  display:grid;
+  grid-template-columns:88px 1fr;
+  gap:28px;
+  padding:24px 0;
+  border-top:1px solid var(--line-soft);
+  align-items:start;
+}
+.sm-row:first-child{border-top:none;padding-top:0}
+.sm-key{
+  font-size:12.5px;
+  letter-spacing:.16em;
+  color:var(--accent);
+  font-weight:600;
+  padding-top:4px;
+}
+.sm-val p{
+  font-size:14.5px;
+  color:var(--ink-2);
+}
+.mini{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:11px;
+}
+.mini li{
+  font-size:12px;
+  padding:3px 10px;
+  border-radius:5px;
+  background:var(--panel);
+  border:1px solid var(--line);
+  color:var(--ink-2);
+}
 
 
 
