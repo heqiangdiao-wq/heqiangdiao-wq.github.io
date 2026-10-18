@@ -25,7 +25,37 @@
   --ease:cubic-bezier(.22,.61,.36,1);
 }
 
-
+/* ============================================================
+   基础重置与排版
+   ============================================================ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:15.5px;
+  line-height:1.78;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+::selection{background:var(--accent);color:#fff}
+:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  border-radius:3px;
+}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:700;letter-spacing:.02em;line-height:1.25}
+strong,b{font-weight:600;color:var(--ink)}
+em{font-style:normal}
 
 
 
