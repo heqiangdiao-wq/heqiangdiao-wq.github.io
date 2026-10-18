@@ -232,7 +232,52 @@ em{font-style:normal}
   z-index:-1;
 }
 
-
+/* ============================================================
+   Hero 下半：事实清单与标签
+   ============================================================ */
+.hero-meta{
+  padding-bottom:76px;
+}
+.facts{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+  margin-bottom:26px;
+}
+.facts > div{
+  background:var(--panel);
+  padding:22px 24px;
+}
+.facts dt{
+  font-size:11.5px;
+  letter-spacing:.16em;
+  color:var(--ink-3);
+  margin-bottom:8px;
+}
+.facts dd{
+  font-size:14.5px;
+  font-weight:600;
+  color:var(--ink);
+  line-height:1.55;
+}
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.chips li{
+  font-size:12.5px;
+  padding:5px 14px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:var(--panel);
+  color:var(--ink-2);
+  letter-spacing:.02em;
+}
 
 
 
