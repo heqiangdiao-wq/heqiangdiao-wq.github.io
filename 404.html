@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>页面不存在 · 贺强</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.nf{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-block:80px;
+}
+.nf-code{
+  font-family:var(--serif);
+  font-size:clamp(64px,16vw,140px);
+  font-weight:700;
+  line-height:1;
+  color:var(--accent);
+  letter-spacing:.02em;
+  margin-bottom:10px;
+}
+.nf-title{
+  font-family:var(--serif);
+  font-size:clamp(20px,3.4vw,28px);
+  margin-bottom:14px;
+}
+.nf-text{
+  color:var(--ink-2);
+  max-width:28em;
+  margin-bottom:32px;
+}
+.nf-back{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:11px 22px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  font-size:14px;
+  font-weight:600;
+  transition:border-color .24s var(--ease),color .24s var(--ease),background .24s var(--ease);
+}
+.nf-back:hover{
+  border-color:var(--accent);
+  color:#fff;
+  background:var(--accent);
+}
+</style>
+</head>
+<body>
+<main class="nf">
+  <div class="wrap">
+    <p class="nf-code">404</p>
+    <h1 class="nf-title">这个页面不存在</h1>
+    <p class="nf-text">链接可能输错了，或者页面已经被移动。回到首页继续看吧。</p>
+    <a class="nf-back" href="/">返回首页</a>
+  </div>
+</main>
+</body>
+</html>
