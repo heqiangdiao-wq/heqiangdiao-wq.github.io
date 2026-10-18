@@ -845,7 +845,43 @@ em{font-style:normal}
   .res{padding:22px 24px}
 }
 
+/* ============================================================
+   响应式 · 手机（≤640px）
+   ============================================================ */
+@media (max-width:640px){
+  body{font-size:15px;line-height:1.72}
+  :root{--gutter:20px;--radius:12px}
 
+  .hero{padding-block:64px 36px}
+  .hero-name{font-size:clamp(44px,14vw,64px)}
+  .hero-meta{padding-bottom:52px}
+  .facts{grid-template-columns:1fr}
+  .facts > div{padding:16px 20px}
+
+  .sec{padding-block:52px}
+  .project{padding-block:44px}
+  .sec-head{margin-bottom:28px;gap:12px}
+
+  .nav{gap:16px;font-size:12.5px}
+  .topbar-in{padding-block:12px}
+
+  .tl-item{
+    grid-template-columns:1fr;
+    gap:6px;
+  }
+  .tl-when{padding-top:0}
+
+  .flow{grid-template-columns:1fr}
+  .rules li{grid-template-columns:32px 1fr;gap:12px;padding:17px 18px}
+  .stack-row{grid-template-columns:1fr;gap:8px}
+  .sm-row{grid-template-columns:1fr;gap:8px;padding:20px 0}
+
+  .contact-grid{grid-template-columns:1fr}
+  .honor-list{grid-template-columns:1fr}
+
+  .about-side{gap:22px}
+  .side-num{font-size:28px}
+}
 
 
 
