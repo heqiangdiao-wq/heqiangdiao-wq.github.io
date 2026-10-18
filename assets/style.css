@@ -379,7 +379,70 @@ em{font-style:normal}
 .work-intro{max-width:34em}
 .work-intro .lead{color:var(--ink)}
 
-
+/* ============================================================
+   案例：标题、双栏问题区
+   ============================================================ */
+.project{padding-block:64px}
+.case-head{margin-bottom:44px}
+.case-kicker{
+  font-size:11.5px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--rust);
+  font-weight:600;
+  margin-bottom:14px;
+}
+.case-title{
+  font-size:clamp(24px,3.6vw,34px);
+  letter-spacing:.03em;
+  margin-bottom:14px;
+}
+.case-sub{
+  font-size:15px;
+  color:var(--ink-2);
+  max-width:38em;
+}
+.case-grid{
+  display:grid;
+  grid-template-columns:1.35fr 1fr;
+  gap:48px;
+  align-items:start;
+}
+.case-block h4{
+  font-size:13px;
+  letter-spacing:.18em;
+  color:var(--ink-3);
+  font-family:var(--sans);
+  font-weight:600;
+  margin-bottom:16px;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--line);
+}
+.case-block p{
+  font-size:14.5px;
+  color:var(--ink-2);
+  margin-bottom:14px;
+}
+.case-block p:last-child{margin-bottom:0}
+.case-pain{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:26px 28px;
+}
+.case-pain h4{border-bottom-color:var(--line-soft)}
+.pain-list{display:flex;flex-direction:column;gap:18px}
+.pain-list li{display:flex;flex-direction:column;gap:3px}
+.pain-list b{
+  font-size:14px;
+  color:var(--rust);
+  letter-spacing:.08em;
+}
+.pain-list span{
+  font-size:13.5px;
+  color:var(--ink-2);
+  line-height:1.65;
+}
 
 
 
