@@ -909,4 +909,33 @@ em{font-style:normal}
 
 
 
-
+/* ============================================================
+   打印：A4 友好
+   ============================================================ */
+@media print{
+  :root{
+    --paper:#fff;
+    --panel:#fff;
+    --line:#cfcabf;
+    --line-soft:#e2ddd3;
+    --ink:#111;
+    --ink-2:#333;
+    --ink-3:#666;
+  }
+  body{font-size:10.5pt;line-height:1.6}
+  .topbar,.progress{display:none}
+  .hero{padding-block:0 16pt}
+  .hero-meta{padding-bottom:18pt}
+  .sec{padding-block:16pt;border-top:1px solid var(--line);page-break-inside:avoid}
+  .project{padding-block:12pt}
+  .sec-contact{background:#fff;color:#111}
+  .sec-contact .sec-head h2{color:#111}
+  .sec-contact .sec-idx{color:#333}
+  .sec-contact .rule{background:var(--line)}
+  .contact-card{border-color:var(--line)}
+  .cc-label,.privacy{color:#666}
+  .flow-node,.card,.rules li,.res,.contact-card{break-inside:avoid}
+  .foot{display:none}
+  a{text-decoration:none;color:inherit}
+  .chips li,.mini li{border-color:var(--line)}
+}
