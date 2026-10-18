@@ -543,7 +543,39 @@ em{font-style:normal}
 }
 .rules b{color:var(--ink)}
 
-
+/* ============================================================
+   案例：技术栈
+   ============================================================ */
+.stack{display:flex;flex-direction:column}
+.stack-row{
+  display:grid;
+  grid-template-columns:96px 1fr;
+  gap:24px;
+  padding:16px 0;
+  border-top:1px solid var(--line-soft);
+  align-items:start;
+}
+.stack-row:first-child{border-top:none}
+.stack-row > span{
+  font-size:12.5px;
+  letter-spacing:.12em;
+  color:var(--ink-3);
+  padding-top:3px;
+}
+.stack-row ul{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+.stack-row li{
+  font-size:12.5px;
+  padding:4px 12px;
+  border-radius:6px;
+  background:var(--accent-soft);
+  color:var(--accent);
+  font-weight:600;
+  letter-spacing:.02em;
+}
 
 
 
