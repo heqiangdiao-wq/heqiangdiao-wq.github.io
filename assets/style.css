@@ -1,4 +1,29 @@
+/* ============================================================
+   设计令牌
+   配色取自「农业 + 电商」的复合语义：墨绿代表植物与生长，
+   赭红用于强调与警示，暖白作底避免屏幕白刺眼。
+   ============================================================ */
+:root{
+  --ink:#17211c;
+  --ink-2:#4a544d;
+  --ink-3:#8b948c;
+  --paper:#f8f7f3;
+  --panel:#ffffff;
+  --line:#e3e1d8;
+  --line-soft:#eeece5;
+  --accent:#2f5d47;
+  --accent-soft:#e9f0eb;
+  --rust:#b3502e;
+  --rust-soft:#f8efe9;
 
+  --serif:"Songti SC","Noto Serif SC","Source Han Serif SC",STSong,Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+
+  --maxw:1000px;
+  --gutter:36px;
+  --radius:14px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
 
 
 
