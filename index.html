@@ -177,7 +177,22 @@
   </div>
 </section>
 
-
+<section class="sec project">
+  <div class="wrap">
+    <article class="case">
+      <h4 class="block-title">六条判定规则</h4>
+      <p>系统的价值不在能点按钮，而在<strong>知道什么时候不该点</strong>。这六条是从真实运行里长出来的，每一条都对应一次踩坑。</p>
+      <ol class="rules">
+        <li><span class="rn">01</span><p><b>无「激活」整链跳过</b> — 该链接下没有正在跑的激活活动，直接跳过，不做任何比较。</p></li>
+        <li><span class="rn">02</span><p><b>基准取最小值</b> — base = min(「激活」∪「已预约」的净收款额)。已预约同样是已占住的档位，只要打得过最差那条就是净赚。</p></li>
+        <li><span class="rn">03</span><p><b>必须有手续费减免</b> — 立即参与和优化折扣两种入口都要检查绿字减免，没有就跳过。</p></li>
+        <li><span class="rn">04</span><p><b>入口分层预筛</b> — 立即参与在卡片层先筛一遍，减少无效弹窗；优化折扣不预筛。</p></li>
+        <li><span class="rn">05</span><p><b>限时抢购只改数量</b> — 数量读不到时保持平台默认值，绝不自行填写。</p></li>
+        <li><span class="rn">06</span><p><b>优化折扣是唯一升级入口</b> — 弹窗里比「新提案 vs 当前档」，新的大于当前才确认。</p></li>
+      </ol>
+    </article>
+  </div>
+</section>
 
 
 

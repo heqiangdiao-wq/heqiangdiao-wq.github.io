@@ -507,7 +507,41 @@ em{font-style:normal}
 .flow-hi span{color:rgba(255,255,255,.72)}
 .flow-hi::before{color:rgba(255,255,255,.5)}
 
-
+/* ============================================================
+   案例：六条判定规则
+   ============================================================ */
+.rules{
+  display:grid;
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+.rules li{
+  background:var(--panel);
+  display:grid;
+  grid-template-columns:44px 1fr;
+  gap:18px;
+  padding:20px 24px;
+  align-items:start;
+  transition:background .24s var(--ease);
+}
+.rules li:hover{background:var(--accent-soft)}
+.rn{
+  font-family:var(--serif);
+  font-size:13px;
+  font-weight:600;
+  color:var(--rust);
+  letter-spacing:.08em;
+  padding-top:5px;
+}
+.rules p{
+  font-size:14.5px;
+  color:var(--ink-2);
+  line-height:1.72;
+}
+.rules b{color:var(--ink)}
 
 
 
