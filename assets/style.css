@@ -373,7 +373,11 @@ em{font-style:normal}
 }
 .metrics b{color:var(--ink);font-weight:600}
 
-
+/* ============================================================
+   作品集开篇
+   ============================================================ */
+.work-intro{max-width:34em}
+.work-intro .lead{color:var(--ink)}
 
 
 
