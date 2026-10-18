@@ -57,7 +57,53 @@ h1,h2,h3,h4{font-family:var(--serif);font-weight:700;letter-spacing:.02em;line-h
 strong,b{font-weight:600;color:var(--ink)}
 em{font-style:normal}
 
+/* ============================================================
+   布局骨架：容器、区块、区块标题
+   ============================================================ */
+.wrap{
+  width:100%;
+  max-width:var(--maxw);
+  margin-inline:auto;
+  padding-inline:var(--gutter);
+}
+.sec{
+  padding-block:76px;
+  border-top:1px solid var(--line-soft);
+  scroll-margin-top:64px;
+}
+.sec-alt{background:var(--panel)}
+.sec:first-of-type{border-top:none}
 
+.sec-head{
+  display:flex;
+  align-items:baseline;
+  gap:16px;
+  margin-bottom:38px;
+}
+.sec-idx{
+  font-family:var(--serif);
+  font-size:12.5px;
+  font-weight:600;
+  letter-spacing:.14em;
+  color:var(--accent);
+}
+.sec-head h2{
+  font-size:21px;
+  letter-spacing:.1em;
+}
+.sec-head .rule{
+  flex:1;
+  height:1px;
+  background:var(--line);
+  margin-bottom:5px;
+}
+.lead{
+  font-family:var(--serif);
+  font-size:clamp(19px,2.6vw,26px);
+  line-height:1.6;
+  letter-spacing:.01em;
+  color:var(--ink);
+}
 
 
 
