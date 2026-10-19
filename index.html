@@ -23,6 +23,17 @@
 .topbar.hide{transform:translateY(-101%)}
 .topbar.stuck{box-shadow:0 1px 12px rgba(23,33,28,.07)}
 
+/* 底纹：科技网点，两层不同尺寸制造纵深（纯 CSS，零请求） */
+body{
+  background-color:var(--paper);
+  background-image:
+    radial-gradient(circle at 1px 1px,rgba(47,93,71,.10) 1px,transparent 0),
+    radial-gradient(circle at 1px 1px,rgba(47,93,71,.05) 1px,transparent 0);
+  background-size:26px 26px,104px 104px;
+  background-position:0 0,13px 13px;
+  background-attachment:fixed;
+}
+
 .cue{
   display:none;
   align-items:center;
@@ -89,6 +100,8 @@
 
   <main id="top">
     <section class="hero">
+      <canvas class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
       <div class="wrap">
         <p class="kicker">Personal Site · 2026</p>
         <h1 class="hero-name">贺强</h1>
