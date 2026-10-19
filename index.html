@@ -15,31 +15,87 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f5d47'/%3E%3Ctext x='16' y='22' font-size='16' font-family='Songti SC,serif' font-weight='700' fill='%23fff' text-anchor='middle'%3E贺%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
+<style>
+/* 首屏关键 CSS：内联，保证 HTML 到达即可着色，不等外部样式表 */
+.nav a.on{color:var(--accent);font-weight:600}
+.nav a.on::after{transform:scaleX(1)}
+.topbar{transition:transform .32s var(--ease),box-shadow .32s var(--ease)}
+.topbar.hide{transform:translateY(-101%)}
+.topbar.stuck{box-shadow:0 1px 12px rgba(23,33,28,.07)}
+
+.cue{
+  display:none;
+  align-items:center;
+  gap:9px;
+  margin-top:30px;
+  font-size:12px;
+  letter-spacing:.16em;
+  color:var(--ink-3);
+}
+.cue i{
+  display:block;
+  width:1px;height:26px;
+  background:linear-gradient(var(--ink-3),transparent);
+  animation:cueDrop 2s var(--ease) infinite;
+}
+@keyframes cueDrop{0%,100%{opacity:.25;transform:scaleY(.5)}50%{opacity:1;transform:scaleY(1)}}
+
+.to-top{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  z-index:55;
+  width:42px;height:42px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.94);
+  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);
+  color:var(--accent);
+  font-size:15px;
+  box-shadow:0 4px 16px rgba(23,33,28,.12);
+  opacity:0;
+  transform:translateY(10px) scale(.92);
+  pointer-events:none;
+  transition:opacity .26s var(--ease),transform .26s var(--ease),border-color .2s var(--ease);
+}
+.to-top.on{opacity:1;transform:none;pointer-events:auto}
+.to-top:hover{border-color:var(--accent)}
+.to-top:focus-visible{outline-color:var(--accent)}
+
+@media (max-width:640px){
+  .cue{display:flex}
+  .to-top{width:38px;height:38px;right:16px;bottom:16px}
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#top">跳到主要内容</a>
 <header class="topbar">
-  <div class="topbar-in">
-    <a class="brand" href="#top">贺强<span class="brand-dot">.</span></a>
-    <nav class="nav" aria-label="主导航">
-      <a href="#about">关于</a>
-      <a href="#work">作品</a>
-      <a href="#path">经历</a>
-      <a href="#skills">技能</a>
-      <a href="#contact">联系</a>
-    </nav>
-  </div>
-  <div class="progress" aria-hidden="true"><i></i></div>
-</header>
+    <div class="topbar-in">
+      <a class="brand" href="#top">贺强<span class="brand-dot">.</span></a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#work">作品</a>
+        <a href="#path">经历</a>
+        <a href="#skills">技能</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </div>
+    <div class="progress" aria-hidden="true"><i></i></div>
+  </header>
 
-<main id="top">
-<section class="hero">
-  <div class="wrap">
-    <p class="kicker">Personal Site · 2026</p>
-    <h1 class="hero-name">贺强</h1>
-    <p class="hero-role">风景园林硕士，把农业背景和数据能力带进<em>电商</em>。</p>
-  </div>
-</section>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <p class="kicker">Personal Site · 2026</p>
+        <h1 class="hero-name">贺强</h1>
+        <p class="hero-role">风景园林硕士，把农业背景和数据能力带进<em>电商</em>。</p>
+        <p class="cue" aria-hidden="true"><i></i>向下滚动</p>
+      </div>
+    </section>
 
 <section class="hero-meta">
   <div class="wrap">
@@ -408,6 +464,8 @@
     <p class="foot-sub">本页为纯静态站点，无第三方追踪脚本。</p>
   </div>
 </footer>
+
+<button class="to-top" type="button" aria-label="回到顶部" hidden>↑</button>
 
 <script src="assets/main.js"></script>
 </body>

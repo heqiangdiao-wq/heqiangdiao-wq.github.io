@@ -32,6 +32,41 @@
   }, { passive: true });
   window.addEventListener('resize', paint, { passive: true });
   paint();
+  /* ---- 滚动方向：下滚收起导航、上滚显示；顶部加投影 ---- */
+  var topbar = document.querySelector('.topbar');
+  var toTop = document.querySelector('.to-top');
+  if (toTop) toTop.hidden = false;
+
+  var lastY = window.pageYOffset || 0;
+  var ticking = false;
+  function onScroll() {
+    ticking = false;
+    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    var goingDown = y > lastY + 4;
+    var goingUp = y < lastY - 4;
+
+    if (topbar) {
+      if (goingDown && y > 320) topbar.classList.add('hide');
+      else if (goingUp || y <= 320) topbar.classList.remove('hide');
+      topbar.classList.toggle('stuck', y > 8);
+    }
+    if (toTop) toTop.classList.toggle('on', y > 720);
+
+    if (goingDown || goingUp) lastY = y;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  onScroll();
+
+  if (toTop) {
+    toTop.addEventListener('click', function () {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      var brand = document.querySelector('.brand');
+      if (brand) brand.focus({ preventScroll: true });
+    });
+  }
 
   /* ---- 当前区块高亮 ---- */
   if (!('IntersectionObserver' in window)) return;
